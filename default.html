@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成都市商务委信息服务平台</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/default.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<section id="menu_main" class="menu-main" >
+    <section class="system-menu" id="system_menu">
+        <div id="logo" class="logo"></div>
+        <nav class="menu-nav" id="menu_nav">
+            <ul>
+                <li><a href="">文 件</a></li>
+                <li><a href="">功 能</a></li>
+                <li><a href="">帮 助</a></li>
+            </ul>
+        </nav>
+    </section>
+
+
+    <section class="main-function" id="main_function">
+        <section class="shortcut" id="shortcut">
+            <ul>
+                <li><img class="shortcut-pic" id="newFile" src="images/shortcut/newfile.png" alt="新建文件" title="新建文件"></li>
+                <li><img class="shortcut-pic"  id="openFile" src="images/shortcut/openfile.png" alt="打开文件" title="打开文件"></li>
+                <li><img  class="shortcut-pic" id="saveFile" src="images/shortcut/save.png" alt="保存" title="保存"></li>
+                <li><img  class="shortcut-pic" id="saveFileAs" src="images/shortcut/saveas.png" alt="另存为" title="另存为"></li>
+                <li><img  class="shortcut-pic" id="closeFile" src="images/shortcut/closefile.png" alt="关闭" title="关闭"></li>
+            </ul>
+        </section>
+
+        <section class="functions" id="functions">
+            <div class="menu-list" id="menu_list">
+                <ul class="menu-icon">
+                    <li>
+                        <div class="menu-btn menu-btn-active" id="logic"></div>
+                    </li>
+                    <li><div class="menu-btn" id="function"></div></li>
+                    <li><div class="menu-btn" id="clock"></div></li>
+                    <li><div class="menu-btn" id="IO"><span>IO</span></div></li>
+                    <li><div class="menu-btn" id="AD"><span>AD</span></div></li>
+                    <li><div class="menu-btn" id="COM"><span>COM</span></div></li>
+                </ul>
+            </div>
+
+            <div class="sub-menu-list" id="sub_menu_list">
+               <!-- <p class="sub-menu-title">功能模块</p>
+                <div class="sub-menu-container">
+                    <div class="sub-menu-icon">
+                        <div class="sub-menu-btn" id="dybl">
+                            <img src="images/function/variable.png" alt="">
+                        </div>
+                        <p class="sub-menu-nametxt">定义变量</p>
+                    </div>
+
+                    <div class="sub-menu-icon">
+                        <div class="sub-menu-btn" id="blfz">
+                            <img src="images/function/equal.png" alt="">
+                        </div>
+                        <p class="sub-menu-nametxt">变量赋值</p>
+                    </div>
+
+                    <div class="sub-menu-icon">
+                        <div class="sub-menu-btn" id="blys">
+                            <img src="images/function/calculation.png" alt="">
+                        </div>
+                        <p class="sub-menu-nametxt">变量运算</p>
+                    </div>
+
+                    <div class="sub-menu-icon">
+                        <div class="sub-menu-btn" id="dymk">
+                            <img src="images/function/call_merge.png" alt="">
+                        </div>
+                        <p class="sub-menu-nametxt">调用模块</p>
+                    </div>
+
+                    <div class="sub-menu-icon">
+                        <div class="sub-menu-btn" id="zxmk">
+                            <img src="images/function/gear.png" alt="">
+
+                        </div>
+                        <p class="sub-menu-nametxt">执行模块</p>
+                    </div>
+
+                    <div class="sub-menu-icon">
+                        <div class="sub-menu-btn" id="cxzs">
+                            <img src="images/function/notes.png" alt="">
+                        </div>
+                        <p class="sub-menu-nametxt">程序注释</p>
+                    </div>
+-->
+
+<!--
+                    <div class="sub-menu-btn" id="sfz"></div>
+                    <div class="sub-menu-btn" id="xh"></div>
+                    <div class="sub-menu-btn" id="tjxh"></div>
+                    <div class="sub-menu-btn" id="jxxh"></div>
+                    <div class="sub-menu-btn" id="tcxh"></div>-->
+                </div>
+
+            </div>
+        </section>
+    </section>
+</section>
+
+<section id="edit" class="edit">
+    <div id="edit_title" class="edit-title">
+        <div class="file-container">
+            <div class="file-name file-name-active">
+                新文件1
+            </div>
+
+            <div class="file-name">
+                新文件2
+            </div>
+            <div class="file-name">
+                新文件3
+            </div>
+        </div>
+
+
+        <div class="window-btn-container">
+            <div class="window-btn window-backword" alt="撤销" title="撤销"></div>
+            <div class="window-btn window-forword" alt="恢复" title="恢复"></div>
+            <div class="window-btn window-location" alt="部件定位" title="部件定位"></div>
+            <div class="window-btn window-download" alt="下载" title="下载"></div>
+            <div class="window-btn window-min" alt="最小化" title="最小化"></div>
+            <div class="window-btn window-max" alt="最大化" title="最大化"></div>
+            <div class="window-btn window-close" alt="关闭" title="关闭"></div>
+        </div>
+    </div>
+    <section  id="edit_pane" class="edit-pane"></section>
+</section>
+
+<script src="script/jquery-1.12.0.min.js"></script>
+<script src="js/menu-data.js"></script>
+<script src="js/default.js"></script>
+</body>
+</html>
