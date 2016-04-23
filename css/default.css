@@ -261,6 +261,12 @@ nav ul li > a:hover{
     text-align: center;
     /*display: none;*/
 }
+/*
+.functions .sub-menu-list  .sub-menu-container{
+    width: 120px;
+
+}
+*/
 
 .functions .sub-menu-list .sub-menu-container .sub-menu-icon{
     float: left;
@@ -279,7 +285,7 @@ nav ul li > a:hover{
 
 }
 .functions .sub-menu-list .sub-menu-container{
-    width: 100%;
+    max-height: 520px;
     overflow: auto;
 }
 .functions .sub-menu-list .sub-menu-btn{
@@ -361,7 +367,38 @@ nav ul li > a:hover{
 }
 
 .functions .sub-menu-list div#cxzs{
-    background-color: #ff797b;
+    background-color: #c86f32;
+}
+
+
+.functions .sub-menu-list div#ys{
+    background-color: #ff7500;
+}
+
+
+.functions .sub-menu-list div#sdsj{
+    background-color: #3ac5ff;
+}
+
+.functions .sub-menu-list div#zxds{
+    background-color: #6fdd6f;
+}
+
+
+.functions .sub-menu-list div#gbds{
+    background-color: #ff4472;
+}
+
+
+.functions .sub-menu-list .sub-menu-btn-io{
+    background-color: #ff5e6a;
+}
+.functions .sub-menu-list .sub-menu-btn-ad{
+    background-color: #97e77c;
+}
+
+.functions .sub-menu-list .sub-menu-btn-com{
+    background-color: #ffbb49;
 }
 
 .edit{
@@ -466,3 +503,147 @@ nav ul li > a:hover{
       background-size: 35%;
       background-image: url("../images/windowbtn/download.png");
   }
+
+.edit .edit-pane .protoContainer{
+    margin: 50px;
+
+    border:1px dotted grey;
+    width: 300px;
+    height: 400px;
+}
+
+
+.protoContainer >p{
+    font-size: 14px;
+
+    text-indent: 10px;
+}
+
+#jkyk{
+    margin: 10px auto;
+
+
+/*    border: 0;
+    border-bottom: 1px solid black;*/
+    /*border: 1px solid black;*/
+
+    width: 120px;
+    height: 30px;
+    border-radius:15px;
+
+    background-color: #3bc38e;
+
+    overflow: hidden;
+}
+#jkyk2{
+    margin: 10px auto;
+
+/*    border: 0;
+    border-bottom: 1px solid black;*/
+    /*border: 1px solid black;*/
+
+    width: 120px;
+    height: 30px;
+    border-radius:15px;
+
+    background-color: #3bc38e;
+
+    overflow: hidden;
+}
+
+#jkyk2 > .jkyk-txt{
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    float: left;
+
+    width: 120px;
+    height: 30px;
+    border-radius:15px;
+
+    font-size: 14px;
+    outline: none;
+
+    background-color: #3bc38e;
+    color: white;
+
+    text-indent: 10px;
+}
+
+#jkyk .jkyk-txt {
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    float: left;
+
+    width: 90px;
+    height: 30px;
+    border-radius:15px;
+
+    font-size: 14px;
+    outline: none;
+
+    background-color: #3bc38e;
+    color: white;
+
+    text-indent: 10px;
+
+}
+#jkyk .jkyk-btn {
+    float: left;
+
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius:15px;
+
+    background-image: url("../images/editProto/jkyk.png");
+    background-position: center center;
+    background-size: 12px 6px;
+    background-repeat:no-repeat;
+
+
+    background-color: #3bc38e;
+
+
+}
+
+#jkyk .jkyk-btn:hover {
+    float: left;
+    width: 30px;
+    height: 30px;
+
+    background-color: #49ffbb;
+    transition:background-color 0.6s linear;
+
+}
+
+#jkyk > ul{
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid #3bc38e;
+
+    overflow: auto;
+
+    background-color: white;
+}
+
+#jkyk > ul > li{
+    margin: 0;
+    padding: 0 10px;
+
+    min-width: 98px;
+    height: 30px;
+    font-size: 14px;
+
+    line-height: 30px;
+    list-style: none;
+}
+
+#jkyk > ul > li:hover{
+   background-color: #eeeeee;
+}

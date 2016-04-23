@@ -2,18 +2,45 @@
  * Created by SUN on 2016/3/16 0016.
  */
 
-$(function(){
+$(function () {
     initFrame();
     bindEvent();
 
+    var $jkyk = $("#jkyk");
+    var flag = 0;
+
+    var $listItem = $('#jkyk > ul > li');
+    var $ul = $('#jkyk > ul');
+
+
+    $('.jkyk-btn').click(function (evet) {
+        evet.stopPropagation();
+        $jkyk.animate({height: '286px'}, 'fast');
+    });
+
+    $listItem.click(function (evet) {
+        evet.stopPropagation();
+
+        var v = $(this).text();
+        if(v == '上一页' || v == '下一页'){
+
+        }else {
+            $('.jkyk-txt').val(v);
+            $jkyk.animate({height: '30'}, 'slow');
+        }
+    });
+
+    $ul.mouseleave(function (evet) {
+        evet.stopPropagation();
+        $jkyk.animate({height: '30'}, 'slow');
+    });
 });
 
-$(window).resize(function(){
-
+$(window).resize(function () {
     initFrame();
 });
 
-function initFrame(){
+function initFrame() {
     var windowWidth = $(window).width();
 
     var menu_main_width = $('.menu-main').width();
@@ -24,19 +51,19 @@ function initFrame(){
     $('.file-container').width(edit_width - window_btn_width);
 }
 
-function bindEvent(){
+function bindEvent() {
 
     var $menubtn = $('.menu-btn');
 
-    $menubtn.click(function(){
+    $menubtn.click(function () {
         var $menubtnactive = $(".menu-btn-active");
 
         // 1 . 移除上一个menu-btn-active样式
-        if($menubtnactive.css('background-image') != 'none'){
+        if ($menubtnactive.css('background-image') != 'none') {
             var c = $menubtnactive.attr('id');
-            $menubtnactive.css('background-image',"url(images/svg/"+ c +".svg)");
-        }else {
-            $(".menu-btn-active > span").css('color','gray');
+            $menubtnactive.css('background-image', "url(images/svg/" + c + ".svg)");
+        } else {
+            $(".menu-btn-active > span").css('color', 'gray');
         }
         $menubtnactive.removeClass('menu-btn-active');
 
@@ -44,12 +71,12 @@ function bindEvent(){
         $(this).addClass('menu-btn-active');
 
         $menubtnactive = $(".menu-btn-active");
+        var c = $menubtnactive.attr('id');
 
-        if($menubtnactive.css('background-image') != 'none'){
-            var c = $menubtnactive.attr('id');
-            $menubtnactive.css('background-image',"url(images/svg/"+ c +"-hover.svg)");
-        }else {
-            $(".menu-btn-active > span").css('color','white');
+        if ($menubtnactive.css('background-image') != 'none') {
+            $menubtnactive.css('background-image', "url(images/svg/" + c + "-hover.svg)");
+        } else {
+            $(".menu-btn-active > span").css('color', 'white');
         }
 
         // 3. 切换子菜单内容
@@ -59,34 +86,58 @@ function bindEvent(){
     swichMenuActive();
 }
 
-function swichMenuActive(){
+function swichMenuActive() {
     var $menubtnactive = $(".menu-btn-active");
-    if($menubtnactive.css('background-image')){
+    if ($menubtnactive.css('background-image')) {
         var c = $menubtnactive.attr('id');
-        $menubtnactive.css('background-image',"url(images/svg/"+ c +"-hover.svg)");
+        $menubtnactive.css('background-image', "url(images/svg/" + c + "-hover.svg)");
     }
 
     $('#sub_menu_list').append(logicHtml);
 }
 
 
-function switchSubmenu(id){
+function switchSubmenu(id) {
     var $submenulist = $('#sub_menu_list');
 
-    $submenulist.children().fadeOut(function(){
+    $submenulist.children().fadeOut(function () {
         $submenulist.children().remove()
     });
 
-    setTimeout(function(){
-        switch (id){
-            case 'logic':{
+    setTimeout(function () {
+        switch (id) {
+            case 'logic':
+            {
                 $submenulist.append(logicHtml);
                 break;
             }
-            case 'function':{
+            case 'function':
+            {
                 $submenulist.append(functionHtml);
-                break
+                break;
             }
+            case 'clock':
+            {
+                $submenulist.append(timeHtml);
+                break;
+            }
+            case 'IO':
+            {
+                $submenulist.append(ioHtml);
+                break;
+            }
+            case 'AD':
+            {
+                $submenulist.append(adHtml);
+                break;
+            }
+            case 'COM':
+            {
+                $submenulist.append(comHtml);
+                break;
+            }
+            default:
+                ;
         }
     }, 500);
 
